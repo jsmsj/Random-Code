@@ -10,5 +10,5 @@ The second general now confirms it by sending 20 messengers with a confirmation 
 Ofcourse this will happen for infinite number of times.
 
 ## Images:
-
+![](https://i.imgur.com/bKHql5N.png)
 

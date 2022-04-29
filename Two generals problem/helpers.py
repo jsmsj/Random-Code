@@ -77,6 +77,6 @@ def summary(castle,general1,general2):
         f"he confirmed the receiveing the message by sending {general2.sent_messages} messengers with the message '{general2.message_sent}'.\n" \
         f"Out of which {general2.sent_messages - general1.received_messages} messengers were killed by the castle." \
         f"\nHence, {general1.name} received {general1.received_messages} messages all having same unique id which was '{general1.recvd_unique_msg_id}'."
-    stats = f"\nArmy Counts:\n\t{general1.name} : {general1.army_count}\n\t{general2.name} : {general2.army_count}\n\nMessengers killed by castle:\n\t{castle.kills}"
+    stats = f"\n\nArmy Counts:\n\t{general1.name} : {general1.army_count}\n\t{general2.name} : {general2.army_count}\n\nMessengers killed by castle:\n\t{castle.kills}"
     text+=stats
     return text
