@@ -7,6 +7,11 @@ def generate_key():
 def kill_or_not():
     return random.choice([True,False])
 
+def check(obj):
+    if obj.army_count<=0:
+        exit(f"{obj.name} has ran out of soldiers or was given a non-positive army count")
+
+
 class General:
     def __init__(self,name,army_count):
         self.name=name
@@ -18,6 +23,10 @@ class General:
         self.message_sent= ""
         self.recvd_unique_msg_id = ""
         self.message_revcd= ""
+        self.check = check
+
+    def army_check(self):
+        self.check(self)
 
     def create_messengers(self,number,message):
         self.message_sent = message
@@ -26,7 +35,7 @@ class General:
         for i in range(number):
             messengers.append((i+1,unique_key,message))
             self.sent_messages+=1
-            self.army_count - 1
+            self.army_count -= 1
         return messengers
 
     def army_count(self):
